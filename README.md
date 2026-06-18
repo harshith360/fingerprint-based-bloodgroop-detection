@@ -1,4 +1,4 @@
-\# FiFingerprint-Based Blood Group Detection
+Fingerprint-Based Blood Group Detection
 Overview
 Fingerprint-Based Blood Group Detection is a deep learning-based system that predicts a person's blood group using fingerprint images. The project combines biometric fingerprint analysis, image processing, and Convolutional Neural Networks (CNNs) to provide a non-invasive approach for blood group prediction.
 
