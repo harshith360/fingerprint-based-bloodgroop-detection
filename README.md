@@ -138,7 +138,8 @@ To use the application:
 
 ### Application Home Page
 
-*(Add screenshot here)*
+<img width="948" height="513" alt="Screenshot 2026-06-18 132241" src="https://github.com/user-attachments/assets/8fbc5df8-7d8e-4bb9-8ebc-0e0a65c12970" />
+
 
 ### Fingerprint Capture
 
