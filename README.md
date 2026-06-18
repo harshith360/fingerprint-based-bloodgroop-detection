@@ -141,13 +141,9 @@ To use the application:
 <img width="948" height="513" alt="Screenshot 2026-06-18 132241" src="https://github.com/user-attachments/assets/8fbc5df8-7d8e-4bb9-8ebc-0e0a65c12970" />
 
 
-### Fingerprint Capture
-
-*(Add screenshot here)*
-
 ### Prediction Result
 
-*(Add screenshot here)*
+<img width="1920" height="1014" alt="Screenshot_20250422_162329" src="https://github.com/user-attachments/assets/607e047f-7a65-4c9a-b1a0-4fb5c0130b87" />
 
 ---
 
