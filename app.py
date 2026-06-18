@@ -1,29 +1,17 @@
 from flask import Flask, render_template, jsonify
 import subprocess
-import cv2
-import numpy as np
-from tensorflow.keras.models import load_model
-import time
 import base64
+import cv2
 import os
+import time
+
+from preprocessing import preprocess_fingerprint
+from predict import predict_blood_group
 
 app = Flask(__name__)
 
-# Load the trained model (expects grayscale input shape: (224, 224, 1))
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-MODEL_PATH = os.path.join(
-    BASE_DIR,
-    "fingerprint_blood_group_model_1.keras"
-)
-
-model = load_model(MODEL_PATH) 
-blood_groups = ['A+', 'A-', 'AB+', 'AB-', 'B+', 'B-', 'O+', 'O-']
-
-# Paths
-cpp_exe_path = r"C:\Users\ASUS\source\repos\SecugenConnect\x64\Debug\SecugenConnect.exe"
-captured_image_path = r"C:\Users\ASUS\source\repos\SecugenConnect\fingerprint\fingerprint.bmp"
+cpp_exe_path = r"..."
+captured_image_path = r"..."
 
 @app.route('/')
 def index():
@@ -52,8 +40,9 @@ def predict():
         processed_image = np.expand_dims(processed_image, axis=0)   # (1, 224, 224, 1)
 
         # Predict
-        prediction = model.predict(processed_image)
-        predicted_label = blood_groups[np.argmax(prediction)]
+        image, processed_image = preprocess_fingerprint(captured_image_path)
+
+        predicted_label = predict_blood_group(processed_image)
 
         # Convert original image (grayscale) to base64 for web display
         color_image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
