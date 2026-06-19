@@ -26,6 +26,6 @@ model = load_model(MODEL_PATH)
 def predict_blood_group(processed_image):
 prediction = model.predict(processed_image)
 
-```
+
 return blood_groups[np.argmax(prediction)]
-```
+
