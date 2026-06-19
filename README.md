@@ -74,16 +74,14 @@ The application follows the workflow below:
 Fingerprint-Blood-Group-Detection/
 │
 ├── app.py
+├── predict.py
+├── preprocessing.py
 ├── requirements.txt
-├── README.md
-├── .gitignore
 │
 ├── templates/
 │   └── index.html
 │
 ├── screenshots/
-│
-├── docs/
 │
 └── model/
 ```
